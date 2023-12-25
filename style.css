@@ -626,6 +626,11 @@ body {
   margin-bottom: auto;
 }
 
+.hero__body a .title span {
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .hero__body a::before {
   background-size: cover;
   width: 100%;
