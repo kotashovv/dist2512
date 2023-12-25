@@ -1,0 +1,67 @@
+// подключаем шрифты
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+
+// Ограничивающий контейнер
+.container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// переменные
+
+$font: "Montserrat", sans-serif;
+$black: #373737;
+$gray: #606060;
+
+//кнопки
+
+.burger-btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    svg {
+        pointer-events: none;
+    }
+}
+
+.main-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    color: #fff;
+    background-color: $black;
+    padding: 18px 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        right: 5px;
+        top: calc(50% - 20px);
+        width: 40px;
+        height: 40px;
+        background-image: url(assets/imgs/button-decor.png);
+        z-index: 2;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+body {
+    font-family: $font;
+}

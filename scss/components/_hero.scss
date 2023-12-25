@@ -1,0 +1,362 @@
+.hero {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    // .hero__wrap
+
+    &__wrap {
+        position: relative;
+    }
+
+    
+    // .hero__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        min-height: 670px;
+            a {
+                .text-with-arrow {
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    box-sizing: border-box;
+                    padding-right: 55px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: calc(50% - 10px);
+                        width: 48px;
+                        height: 10px;
+                        background-image: url(/assets/imgs/arrow-hero.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    span {
+                        width: 100%;
+                        max-width: 150px;
+                        display: block;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+                padding: 30px;
+                box-sizing: border-box;
+                position: relative;
+                text-decoration: none;
+                color: $black;
+                border-radius: 50px;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                .title {
+                    margin-bottom: auto;
+                }
+                &::before {
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: .35s ease;
+                    z-index: -1;
+                }
+                
+                &:hover {
+                    &::before {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+            a:nth-child(1) { 
+                grid-area: 1 / 1 / 4 / 7;
+                &::before {
+                    background-image: url(assets/imgs/hero1.png);
+                }
+                .text {
+                    margin-top: auto;
+                    max-width: 185px;
+                    margin-bottom: 15px;
+                    span {
+                        color: $black;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 1;
+                        display: block;
+                    }
+                }
+                .list {
+                    display: flex;
+                    align-items: center;
+                    .count {
+                        width: 50px;
+                        border-radius: 50%;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        background-color: #383279;
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        min-width: 50px;
+                        min-height: 50px;
+                        margin-right: 15px;
+                    }
+                    .items {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            display: block;
+                            margin-right: -10px;
+                        }
+                    }
+                }
+             }
+            a:nth-child(2) { 
+                grid-area: 1 / 7 / 3 / 10; 
+                .title {
+                    margin-bottom: auto;
+                }
+               
+                &::before {
+                    background-image: url(assets/imgs/hero2.png);
+                }
+                color: #fff;
+             }
+            a:nth-child(3) { 
+                color: #fff;
+                grid-area: 1 / 10 / 2 / 13;
+                &::before {
+                    background-image: url(/assets/imgs/hero3.png);
+                }
+                .text-with-arrow {
+                    span {
+                        max-width: 190px;
+                    }
+                }
+                &:hover {
+                    &::before {
+                        transform: scale(1);
+                    }
+                    &::after {
+                        transform: scale(1.02);
+                    }
+                }
+             }
+            a:nth-child(4) { 
+                color: #fff;
+                grid-area: 2 / 10 / 3 / 13;
+                overflow: visible;
+                &:hover {
+                    &::before {
+                        transform: scale(1);
+                    }
+                    &::after {
+                        transform: scale(1.02);
+                    }
+                }
+                &::before {
+                    background-image: url(/assets/imgs/hero4.png);
+                    border-radius: 50px;
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-image: url(assets/imgs/grid-decor.png);
+                    width: 60%;
+                    height: 190px;
+                    transition: .35s ease;
+                    top: -50px;
+                    right: -30px;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .text-with-arrow {
+                    span {
+                        max-width: 190px;
+                    }
+                }
+             }
+    }
+
+    // .hero__item
+
+    &__item {
+    }
+
+    // .hero__offer
+
+    &__offer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        box-sizing: border-box;
+        h1 {
+            color: $black;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1;
+            display: block;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+        .action {
+            max-width: 310px;
+            display: block;
+        }
+    }
+}
+
+@media(max-width:1260px) {
+    .hero {
+        &__offer {
+            h1 {
+                font-size: 42px;
+            }
+        }
+    }
+}
+
+
+@media(max-width:920px) {
+    .hero {
+        &__body {
+            min-height: auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+            height: 500px;
+            a {
+                border-radius: 25px;
+                padding: 15px 10px;
+                height: auto;
+                max-height: none;
+                .title {
+                    span {
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .text-with-arrow {
+                    padding: 0;
+                    &::before {
+                        display: none;
+                    }
+                    span {
+                        font-size: 12px;
+                        width: 100%;
+                        
+                    }
+                }
+                &:nth-child(1) { 
+                    grid-area: 1 / 1 / 7 / 13;
+                    &::before {
+                        background-position: top right;
+                    }
+                    .text {
+                        max-width: 105px;
+                        width: 100%;
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                    .list {
+                        .count {
+                            width: 35px;
+                            height: 35px;
+                            margin-right: 15px;
+                            min-width: 35px;
+                            min-height: 35px;
+                            font-size: 12px;
+                        }
+                        .items {
+                            img {
+                                width: 35px;
+                                height: 35px;
+                                margin-right: -10px;
+                            }
+                        }
+                    }
+                 }
+                &:nth-child(2) { 
+                    grid-area: 7 / 1 / 13 / 6;
+                 }
+                &:nth-child(3) { 
+                    grid-area: 7 / 6 / 10 / 13;
+                    &::before {
+                        border-radius: 25px;
+                    }
+                 }
+                &:nth-child(4) { 
+                    grid-area: 10 / 6 / 13 / 13;
+                    border-radius: 25px;
+                    &::before {
+                        border-radius: 25px;
+                    }
+                    &::after {
+                        width: 30%;
+                        right: 2%;
+                        top: -65%;
+                    }
+                 }
+            }
+        }
+        &__offer {
+            position: static;
+            display: block;
+            width: 100%;
+            margin: 0;
+            margin-top: 20px;
+            h1 {
+                font-size: 30px;
+                font-weight: 600;
+                line-height: .98;
+                letter-spacing: -0.3px;
+                margin-bottom: 20px;
+            }
+            
+        }
+    }
+}
+
+@media(max-width:520px) {
+    .hero {
+        &__body {
+            a {
+                &:nth-child(1) {
+                    &::before {
+                        background-image: url(/assets/imgs/hero-1-mobile.png);
+                        background-position: center;
+                    }
+                }
+            }
+        }
+        &__offer {
+            .action {
+                max-width: none;
+            }
+        }
+    }
+}
