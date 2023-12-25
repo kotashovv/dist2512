@@ -32,7 +32,7 @@
                         top: calc(50% - 10px);
                         width: 48px;
                         height: 10px;
-                        background-image: url(/assets/imgs/arrow-hero.png);
+                        background-image: url(assets/imgs/arrow-hero.png);
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -144,7 +144,7 @@
                 color: #fff;
                 grid-area: 1 / 10 / 2 / 13;
                 &::before {
-                    background-image: url(/assets/imgs/hero3.png);
+                    background-image: url(assets/imgs/hero3.png);
                 }
                 .text-with-arrow {
                     span {
@@ -173,7 +173,7 @@
                     }
                 }
                 &::before {
-                    background-image: url(/assets/imgs/hero4.png);
+                    background-image: url(assets/imgs/hero4.png);
                     border-radius: 50px;
                 }
                 
@@ -347,7 +347,7 @@
             a {
                 &:nth-child(1) {
                     &::before {
-                        background-image: url(/assets/imgs/hero-1-mobile.png);
+                        background-image: url(assets/imgs/hero-1-mobile.png);
                         background-position: center;
                     }
                 }

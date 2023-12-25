@@ -608,7 +608,7 @@ body {
   top: calc(50% - 10px);
   width: 48px;
   height: 10px;
-  background-image: url(/assets/imgs/arrow-hero.png);
+  background-image: url(assets/imgs/arrow-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -754,7 +754,7 @@ body {
 }
 
 .hero__body a:nth-child(3)::before {
-  background-image: url(/assets/imgs/hero3.png);
+  background-image: url(assets/imgs/hero3.png);
 }
 
 .hero__body a:nth-child(3) .text-with-arrow span {
@@ -796,7 +796,7 @@ body {
 }
 
 .hero__body a:nth-child(4)::before {
-  background-image: url(/assets/imgs/hero4.png);
+  background-image: url(assets/imgs/hero4.png);
   border-radius: 50px;
 }
 
@@ -964,7 +964,7 @@ body {
 
 @media (max-width: 520px) {
   .hero__body a:nth-child(1)::before {
-    background-image: url(/assets/imgs/hero-1-mobile.png);
+    background-image: url(assets/imgs/hero-1-mobile.png);
     background-position: center;
   }
   .hero__offer .action {
