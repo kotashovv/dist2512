@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/libs/nouislider.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -331,12 +332,258 @@
             
           </div>
         </section>
+
+        <section class="calc">
+          <div class="container">
+            <div class="section__title">
+              <h2 class="section-title">
+                Калькулятор
+              </h2>
+              <p class="section-text">
+                Рассчитайте какое из наших предложений окажется для вас самым выгодным
+              </p>
+            </div>
+            <div class="calc__body">
+              <div class="calc__tabs">
+                <button class="calc__tab active">Бюджет</button>
+                <button class="calc__tab">Объем</button>
+                <button class="calc__tab">Готовность</button>
+                <button class="calc__tab">Функции</button>
+                <button class="calc__tab">Монетизация</button>
+                <button class="calc__tab">ОБратная связь</button>
+              </div>
+              <form action="#" class="calc__steps">
+                <div class="calc__step active">
+                  <div class="calc-1">
+                    <strong>Какой у вас бюджет для создания приложения?</strong>
+                    <div id="range-slider" class="range-slider">
+                      <div class="range-steps">
+                        <span class="start">от 50К</span>
+                        <span class="middle">от 150К</span>
+                        <span class="finish">от 250К</span>
+                      </div>
+                    </div>
+                    <div class="action">
+                      <button class="next-step-btn">Продолжить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
+                        <path d="M1.49072 5.59351H34.4907M34.4907 5.59351L27.9907 10.0315M34.4907 5.59351L27.9907 0.968506" stroke="#373737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc__step">
+                  <div class="calc-2">
+                    <strong>Приложение из скольких страниц вы планируете создать?</strong>
+                    <div class="radios">
+                      <label>
+                        <input value="5" type="radio" name="screen">
+                        <span>
+                          До 5 экранов
+                        </span>
+                      </label>
+                      <label>
+                        <input value="8" type="radio" name="screen">
+                        <span>
+                          5–8 экранов
+                        </span>
+                      </label>
+                      <label>
+                        <input value="12"  type="radio" name="screen">
+                        <span>
+                          9–12 экранов
+                        </span>
+                      </label>
+                      <label>
+                        <input value="15" type="radio" name="screen">
+                        <span>
+                          Больше 12 экранов
+                        </span>
+                      </label>
+                    </div>
+                    <div class="action">
+                      <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                        <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg> Вернуться </button>
+                      <button>Продолжить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
+                        <path d="M1.49072 5.59351H34.4907M34.4907 5.59351L27.9907 10.0315M34.4907 5.59351L27.9907 0.968506" stroke="#373737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc__step">
+                  <div class="calc-3">
+                    <strong>
+                      Какие функции будет выполнять ваше приложение?
+                    </strong>
+                    <div class="checks">
+                      <label>
+                        <input value="Социальные сети" name="app-type" type="checkbox">
+                        <span>
+                          Социальные сети
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Игры" name="app-type" type="checkbox">
+                        <span>
+                          Игры
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Интернет-продажи" name="app-type" type="checkbox">
+                        <span>
+                          Интернет — продажи
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Путешествия" name="app-type" type="checkbox">
+                        <span>
+                          Путешествия
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Красота и здоровье" name="app-type" type="checkbox">
+                        <span>
+                          Красота и здоровье
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Спорт" name="app-type" type="checkbox">
+                        <span>
+                          Спорт
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Досуг" name="app-type" type="checkbox">
+                        <span>
+                          Досуг
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Финансы" name="app-type" type="checkbox">
+                        <span>
+                          Финансы
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Окаазние услуг" name="app-type" type="checkbox">
+                        <span>
+                          Оказание услуг
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Социальные сети" name="app-type" type="checkbox">
+                        <span>
+                          Социальные сети
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Недвижимость" name="app-type" type="checkbox">
+                        <span>
+                          Недвижимость
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Криптовалюта" name="app-type" type="checkbox">
+                        <span>
+                          Криптовалюта
+                        </span>
+                      </label>
+                      <label>
+                        <input value="Другое" name="app-type" type="checkbox">
+                        <span>
+                          Другое
+                        </span>
+                      </label>
+                    </div>
+                    <div class="action">
+                      <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                        <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg> Вернуться </button>
+                      <button>Продолжить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
+                        <path d="M1.49072 5.59351H34.4907M34.4907 5.59351L27.9907 10.0315M34.4907 5.59351L27.9907 0.968506" stroke="#373737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc__step">
+                  <div class="calc-4">
+                    <strong>Как будет происходить приём средств внутри приложения?</strong>
+                    <div class="radios">
+                      <label>
+                        <input value="apple/google" type="radio" name="pay-type">
+                        <span>
+                          Apple Pay / Google Pay
+                        </span>
+                      </label>
+                      <label>
+                        <input value="subs" type="radio" name="pay-type">
+                        <span>
+                          Подписка
+                        </span>
+                      </label>
+                      <label>
+                        <input value="cards"  type="radio" name="pay-type">
+                        <span>
+                          Оплата картой
+                        </span>
+                      </label>
+                      <label>
+                        <input value="no-money" type="radio" name="pay-type">
+                        <span>
+                          Оплата картой
+                        </span>
+                      </label>
+                    </div>
+                    <div class="action">
+                      <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                        <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg> Вернуться </button>
+                      <button>Продолжить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
+                        <path d="M1.49072 5.59351H34.4907M34.4907 5.59351L27.9907 10.0315M34.4907 5.59351L27.9907 0.968506" stroke="#373737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc__step">
+                  <div class="calc-5">
+                    <strong>
+                      Оставьте свои контакты и наша команда свяжется с вами
+                    </strong>
+                    <div class="final">
+                      <label>
+                        <input type="text" name="user-name">
+                        <span>
+                          Имя
+                        </span>
+                      </label>
+                      <label>
+                        <input type="text" name="user-phone">
+                        <span>
+                          Введите номер телефона
+                        </span>
+                      </label>
+                      <div class="action">
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                          <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> Вернуться </button>
+                        <button type="submit ">Отправить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
+                          <path d="M1.49072 5.59351H34.4907M34.4907 5.59351L27.9907 10.0315M34.4907 5.59351L27.9907 0.968506" stroke="#373737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+           
+          </div>
+        </section>
       </main>
       <footer class="footer"></footer>
       <div class="popup__wrap"></div>
     </div>
     <script src="assets/libs/adaptive.js"></script>
     <script src="assets/libs/swiper-bundle.min.js"></script>
+    <script src="assets/libs/nouislider.min.js"></script>
     <script src="scripts/app.js"></script>
   </body>
 </html>

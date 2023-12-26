@@ -1212,3 +1212,268 @@ body {
     font-size: 14px;
   }
 }
+
+.calc {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 75px 0;
+}
+
+.calc .noUi-target {
+  background-color: #ECE5F3;
+  height: 12px;
+  border: none;
+}
+
+.calc .range-slider {
+  position: relative;
+  max-width: 600px;
+  margin-top: 75px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.calc .range-slider .noUi-tooltip {
+  bottom: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  background-image: url(assets/imgs/tooltip.png);
+  background-size: 100% 100%;
+  padding: 6px 15px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #AD7AFF;
+}
+
+.calc .range-slider .range-steps {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.calc .range-slider .range-steps span {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 30px;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  font-size: 24px;
+  color: #373737;
+  font-weight: 700;
+}
+
+.calc .range-slider .range-steps span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -7px;
+  width: 25px;
+  height: 25px;
+  background-color: #D6C6E6;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.calc .range-slider .range-steps span.start {
+  left: -30px;
+}
+
+.calc .range-slider .range-steps span.start::before {
+  left: 15px;
+  background-color: #907EEC;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.calc .range-slider .range-steps span.middle {
+  left: calc(50% - 50px);
+}
+
+.calc .range-slider .range-steps span.middle::before {
+  left: 35px;
+}
+
+.calc .range-slider .range-steps span.middle.active::before {
+  background-color: #AD7AFF;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.calc .range-slider .range-steps span.finish {
+  right: 0;
+  text-align: right;
+  -webkit-transform: translateX(25px);
+      -ms-transform: translateX(25px);
+          transform: translateX(25px);
+  z-index: 10;
+}
+
+.calc .range-slider .range-steps span.finish::before {
+  right: 15px;
+  z-index: 10;
+  left: auto;
+}
+
+.calc .range-slider .range-steps span.finish.active::before {
+  background-color: #C78BFF;
+}
+
+.calc .range-slider .noUi-connect {
+  background: -webkit-gradient(linear, left top, right top, from(#907EEC), to(#DBB2FE));
+  background: -webkit-linear-gradient(left, #907EEC 0%, #DBB2FE 100%);
+  background: -o-linear-gradient(left, #907EEC 0%, #DBB2FE 100%);
+  background: linear-gradient(90deg, #907EEC 0%, #DBB2FE 100%);
+  border-radius: 20px;
+}
+
+.calc .range-slider .noUi-handle {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 0;
+  -webkit-transform: translateX(-12px);
+      -ms-transform: translateX(-12px);
+          transform: translateX(-12px);
+}
+
+.calc .range-slider .noUi-handle::before, .calc .range-slider .noUi-handle::after {
+  display: none;
+}
+
+.calc__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.calc__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 220px;
+  margin-right: auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.calc__tabs::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #606060;
+  opacity: .3;
+}
+
+.calc__tabs button {
+  border: none;
+  background-color: transparent;
+  text-align-last: left;
+  color: #606060;
+  opacity: .9;
+  border-radius: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 5px 5px 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1;
+  cursor: pointer;
+  margin-bottom: 7px;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.calc__tabs button:hover {
+  color: #9380ED;
+}
+
+.calc__tabs button.active {
+  color: #8266FF;
+  opacity: 1;
+  position: relative;
+}
+
+.calc__tabs button.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  z-index: 2;
+  background-color: #9380ED;
+}
+
+.calc__steps {
+  max-width: 900px;
+  width: 100%;
+}
+
+.calc__steps .action {
+  display: block;
+}
+
+.calc__steps .action button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #373737;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+.calc__steps .action button svg {
+  margin: 0 10px;
+}
+
+.calc__step {
+  display: none;
+}
+
+.calc__step strong {
+  display: block;
+  color: #373737;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.calc__step.active {
+  display: block;
+}
