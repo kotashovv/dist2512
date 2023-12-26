@@ -17,7 +17,9 @@
 
 $font: "Montserrat", sans-serif;
 $black: #373737;
+$title: #323232;
 $gray: #606060;
+$purple: #9380ED;
 
 //кнопки
 
@@ -64,4 +66,37 @@ $gray: #606060;
 
 body {
     font-family: $font;
+}
+
+
+.section__title {
+    margin-bottom: 80px;
+    .section-title {
+        font-family: $font;
+        display: block;
+        margin: 0;
+        font-size: 52px;
+        font-weight: 600;
+        color: $title;
+        margin-bottom: 30px;
+    }    
+    p {
+        display: block;
+        margin: 0;
+        font-size: 26px;
+        font-weight: 500;
+        color: #606060;
+    }
+
+    @media(max-width:920px) {
+        margin-bottom: 40px;
+       .section-title {
+        font-size: 30px;
+        margin-bottom: 15px;
+       }
+       p {
+        font-size: 20px;
+       }
+
+    }
 }
