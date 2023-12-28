@@ -7,12 +7,39 @@
         height: 12px;
         border: none;
     }
+    #range-slider-2 {
+        .start {
+            left: 0;
+            &::before {
+                left: -10px;
+            }
+        }
+        .finish {
+            right: 10px;
+            &::before {
+                right: 4px;
+            }
+        }
+    }
     .range-slider {
         position: relative;
         max-width: 600px;
         margin-top: 75px;
         width: 100%;
         margin-bottom: 100px;
+        
+        .help-text {
+            position: absolute;
+            left: 30px;
+            width: 100%;
+            max-width: calc(100% - 50px);
+            top: 35px;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.1;
+            color: $gray;
+        }
         .noUi-tooltip {
             bottom: 25px;
             box-sizing: border-box;
@@ -179,8 +206,15 @@
         max-width: 900px;
         width: 100%;
         .action {
-            display: block;
+            display: flex;
+            margin-top: 50px;
             button {
+                &.prev-calc {
+                    opacity: .5;
+                }
+                &:first-child {
+                    margin-right: 30px;
+                }
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
@@ -214,6 +248,164 @@
         }
         &.active {
             display: block;
+        }
+
+        .final {
+            display: flex;
+            flex-direction: column;
+            label {
+                display: block;
+                max-width: 400px;
+                width: 100%;
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 20px;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                input {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100px;
+                    border: 1.5px solid $black;
+                    box-sizing: border-box;
+                    padding: 15px 20px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $black;
+                    transition: .35s ease;
+                    &:focus {
+                        outline: 1px solid #8266FF;
+                        +span {
+                            color: #8266FF;
+                        }
+                    }
+                }
+                span {
+                    position: absolute;
+                    z-index: 100;
+                    box-sizing: border-box;
+                    padding: 4px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    left: 20px;
+                    top: 15px;
+                    transition: .35s ease;
+                    &._top {
+                        top: -12px;
+                    }
+                }
+                &:hover {
+                    input {
+                        border-color: #AD7AFF;
+                    }
+                    span {
+                        color: #AD7AFF;
+                    }
+                }
+                
+            }
+        }
+
+        .checks {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+            label {
+                width: calc(33.33% - 10px);
+                margin: 0 5px 15px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                cursor: pointer;
+                >span {
+                    color: $black;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.1;
+                }
+                .check-box {
+                    margin-right: 10px;
+                    position: relative;
+                    display: block;
+                    box-sizing: border-box;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 5px;
+                    border: 2px solid #8266FF;
+                    input {
+                        opacity: 0;
+                        &:checked {
+                            +span {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    span {
+                        width: 18px;
+                        height: 16px;
+                        position: absolute;
+                        right: -2px;
+                        top: -4px;
+                        background-image: url(assets/imgs/check-icon.png);
+                        background-size: 100% 100%;
+                        transition: .35s ease;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        .radios {
+            display: flex;
+            flex-direction: column;
+            label {
+                position: relative;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                input {
+                    opacity: 0;
+                }
+                .radio-elem {
+                    width: 22px;
+                    height: 22px;
+                    position: relative;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    border: 2px solid $purple;
+                    span {
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                        background-color: $purple;
+                        border-radius: 50%;
+                        left: calc(50% - 7px);
+                        top: calc(50% - 7px);
+                        transition: .35s ease;
+                        opacity: 0;
+                    }
+                    input {
+                        &:checked {
+                            +span {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    
+                }
+                .radio-text {
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: $black;
+                    line-height: 1.1;
+                    
+                }
+            }
         }
     }
 }

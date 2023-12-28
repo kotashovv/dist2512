@@ -370,37 +370,49 @@
                     </div>
                   </div>
                 </div>
-                <div class="calc__step">
+                <div class="calc__step ">
                   <div class="calc-2">
                     <strong>Приложение из скольких страниц вы планируете создать?</strong>
                     <div class="radios">
                       <label>
-                        <input value="5" type="radio" name="screen">
-                        <span>
+                        <div class="radio-elem">
+                          <input value="5" type="radio" name="screen">
+                          <span></span>
+                        </div>
+                        <span class="radio-text">
                           До 5 экранов
                         </span>
                       </label>
                       <label>
-                        <input value="8" type="radio" name="screen">
-                        <span>
+                        <div class="radio-elem">
+                          <input value="8" type="radio" name="screen">
+                          <span></span>
+                        </div>
+                        <span class="radio-text">
                           5–8 экранов
                         </span>
                       </label>
                       <label>
-                        <input value="12"  type="radio" name="screen">
-                        <span>
+                        <div class="radio-elem">
+                          <input value="12" type="radio" name="screen">
+                          <span></span>
+                        </div>
+                        <span class="radio-text">
                           9–12 экранов
                         </span>
                       </label>
                       <label>
-                        <input value="15" type="radio" name="screen">
-                        <span>
+                        <div class="radio-elem">
+                          <input value="15" type="radio" name="screen">
+                          <span></span>
+                        </div>
+                        <span class="radio-text">
                           Больше 12 экранов
                         </span>
                       </label>
                     </div>
                     <div class="action">
-                      <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                      <button class="prev-calc"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
                         <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg> Вернуться </button>
                       <button>Продолжить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
@@ -410,92 +422,138 @@
                   </div>
                 </div>
                 <div class="calc__step">
+                  <div class="calc__ready">
+                    <strong>
+                      Оцените текущую готовность приложения
+                    </strong>
+                    <div id="range-slider-2" class="range-slider">
+                      <div class="range-steps">
+                        <span class="start">1</span>
+                        <span class="finish">10</span>
+                        <div class="help-text">
+                          Где 1 — есть только идея, а 10 — готов дизайн и логика
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc__step ">
                   <div class="calc-3">
                     <strong>
                       Какие функции будет выполнять ваше приложение?
                     </strong>
                     <div class="checks">
                       <label>
-                        <input value="Социальные сети" name="app-type" type="checkbox">
+                        <div class="check-box">
+                          <input value="Социальные сети" name="app-type" type="checkbox">
+                          <span></span>
+                        </div>
                         <span>
                           Социальные сети
                         </span>
                       </label>
                       <label>
-                        <input value="Игры" name="app-type" type="checkbox">
+                        <div class="check-box">
+                          <input value="Игры" name="app-type" type="checkbox">
+                          <span></span>
+                        </div>
                         <span>
                           Игры
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Интернет-продажи" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Интернет — продажи
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Путешествия" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Путешествия
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Красота и здоровье" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Красота и здоровье
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Спорт" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Спорт
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Досуг" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Досуг
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Финансы" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Финансы
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Окаазние услуг" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Оказание услуг
                         </span>
                       </label>
                       <label>
-                        <input value="Социальные сети" name="app-type" type="checkbox">
-                        <span>
-                          Социальные сети
-                        </span>
-                      </label>
-                      <label>
+                        <div class="check-box">
                         <input value="Недвижимость" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Недвижимость
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Криптовалюта" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Криптовалюта
                         </span>
                       </label>
                       <label>
+                        <div class="check-box">
                         <input value="Другое" name="app-type" type="checkbox">
+                        <span></span>  
+                        </div>
                         <span>
                           Другое
                         </span>
                       </label>
                     </div>
                     <div class="action">
-                      <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                      <button class="prev-calc"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
                         <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg> Вернуться </button>
                       <button>Продолжить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
@@ -509,32 +567,44 @@
                     <strong>Как будет происходить приём средств внутри приложения?</strong>
                     <div class="radios">
                       <label>
-                        <input value="apple/google" type="radio" name="pay-type">
+                        <div class="radio-elem">
+                          <input value="apple/google" type="radio" name="pay-type">
+                          <span></span>
+                        </div>
                         <span>
                           Apple Pay / Google Pay
                         </span>
                       </label>
                       <label>
-                        <input value="subs" type="radio" name="pay-type">
+                        <div class="radio-elem">
+                          <input value="subs" type="radio" name="pay-type">
+                          <span></span>
+                        </div>
                         <span>
                           Подписка
                         </span>
                       </label>
                       <label>
-                        <input value="cards"  type="radio" name="pay-type">
+                        <div class="radio-elem">
+                          <input value="cards"  type="radio" name="pay-type">
+                          <span></span>
+                        </div>
                         <span>
                           Оплата картой
                         </span>
                       </label>
                       <label>
-                        <input value="no-money" type="radio" name="pay-type">
+                        <div class="radio-elem">
+                          <input value="no-money" type="radio" name="pay-type">
+                          <span></span>
+                        </div>
                         <span>
                           Оплата картой
                         </span>
                       </label>
                     </div>
                     <div class="action">
-                      <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                      <button class="prev-calc"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
                         <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg> Вернуться </button>
                       <button>Продолжить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
@@ -543,26 +613,26 @@
                     </div>
                   </div>
                 </div>
-                <div class="calc__step">
+                <div class="calc__step ">
                   <div class="calc-5">
                     <strong>
                       Оставьте свои контакты и наша команда свяжется с вами
                     </strong>
                     <div class="final">
                       <label>
-                        <input type="text" name="user-name">
+                        <input class="input-elem" type="text" name="user-name">
                         <span>
-                          Имя
+                          Введите имя
                         </span>
                       </label>
                       <label>
-                        <input type="text" name="user-phone">
+                        <input class="input-elem" type="text" name="user-phone">
                         <span>
                           Введите номер телефона
                         </span>
                       </label>
                       <div class="action">
-                        <button><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
+                        <button class="prev-calc"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="11" viewBox="0 0 35 11" fill="none">
                           <path d="M34 5.59351H1M1 5.59351L7.5 10.0315M1 5.59351L7.5 0.968506" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg> Вернуться </button>
                         <button type="submit ">Отправить <svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11" fill="none">
