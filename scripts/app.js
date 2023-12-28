@@ -49,6 +49,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const rangeSlider = document.querySelector('#range-slider');
     const rangeSliderTwo = document.querySelector('#range-slider-2');
 
+    const prevCalcBtn = document.querySelectorAll('.prev-calc');
+    const nextCalcBtn = document.querySelectorAll('.next-step-btn');
+
+    if (prevCalcBtn) {
+        prevCalcBtn.forEach(item=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault();
+                const activeStep = document.querySelector('.calc__step.active');
+                const activeTab = document.querySelector('.calc__tab.active');
+
+                activeTab.classList.remove('active');
+                activeTab.previousElementSibling.classList.add('active');
+
+                activeStep.classList.remove('active');
+                activeStep.previousElementSibling.classList.add('active');23
+            })
+        })
+    }
+    if (nextCalcBtn) {
+        nextCalcBtn.forEach(item=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault();
+                const activeStep = document.querySelector('.calc__step.active');
+                const activeTab = document.querySelector('.calc__tab.active');
+
+                activeTab.classList.remove('active');
+                activeTab.nextElementSibling.classList.add('active');
+
+                activeStep.classList.remove('active');
+                activeStep.nextElementSibling.classList.add('active');23
+            })
+        })
+    }
+
     if (rangeSliderTwo) {
         const finishElem = document.querySelector('#range-slider-2 .finish');
         noUiSlider.create(rangeSliderTwo, {
@@ -68,8 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     return Number(value.replace(',-', ''));
                 }
             },
-
-
         });
 
         rangeSliderTwo.noUiSlider.on('update', function (values, handle) {

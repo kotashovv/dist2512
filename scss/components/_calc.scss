@@ -205,6 +205,7 @@
     &__steps {
         max-width: 900px;
         width: 100%;
+        margin-left: 50px;
         .action {
             display: flex;
             margin-top: 50px;
@@ -406,6 +407,107 @@
                     
                 }
             }
+        }
+    }
+}
+
+@media(max-width:920px) {
+    .calc {
+        &__tabs {
+            display: none;
+        }
+        &__steps {
+            margin-left: 0;
+            box-sizing: border-box;
+        }
+        
+        &__step {
+            .action {
+                width: 100%;
+                justify-content: space-between;
+            }
+            /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #8266FF #d6d6d6;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #D2D2D2;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8266FF;
+    border-radius: 1px;
+    border: 2px none #ffffff;
+  }
+
+            .checks {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                height: 120px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                max-width: 280px;
+                label {
+                    width: 100%;
+                }
+            }
+            .radios {
+                label {
+                    .radio-elem {
+                        width: 18px;
+                        margin-right: 10px;
+                        height: 18px;
+                    }
+                    .radio-text {
+                        font-size: 18px;
+                    }
+                }
+            }
+            strong {
+                display: block;
+                font-size: 18px;
+                line-height: 1.05;
+                margin-bottom: 25px;
+            }
+            .range-slider {
+                margin-left: 30px;
+                width: 100%;
+                box-sizing: border-box;
+                max-width: calc(100% - 50px);
+                .noUi-tooltip {
+                    font-size: 14px;
+                    padding: 5px 8px 10px;
+                }
+                .range-steps {
+                    span {
+                        &.start, &.middle, &.finish {
+                            font-size: 18px;
+                            &::before {
+                                top: -3px;
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
+                        &.start {
+                            left: -25px;
+                        }
+                        &.middle {
+                            &::before {
+                                left: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
