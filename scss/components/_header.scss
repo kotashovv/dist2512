@@ -35,6 +35,13 @@
                     text-decoration: none;
                     text-transform: uppercase;
                     color: $gray;
+                    transition: .35s ease;
+                    &:hover {
+                        color: #AD7AFF;
+                    }
+                    &:active {
+                        color: #8266FF;
+                    }
                 }
             }
         }

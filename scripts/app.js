@@ -206,5 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const phoneSliderOne = new Swiper('.slider-1', {
+        navigation : {
+            prevEl: '.slider-one .slider-prev',
+            nextEl: '.slider-one .slider-next'
+        }, 
+        pagination: {
+            el: '.slider-one .slider__pagination',
+        }
+    })
+    const phoneSlidertwo = new Swiper('.slider-2', {
+        navigation : {
+            prevEl: '.slider-two .slider-prev',
+            nextEl: '.slider-two .slider-next'
+        }, 
+        pagination: {
+            el: '.slider-two .slider__pagination',
+        }
+    })
 
 });

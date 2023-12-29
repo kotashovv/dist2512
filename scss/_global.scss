@@ -51,6 +51,16 @@ $accent: #8266FF;
     text-align: left;
     position: relative;
     cursor: pointer;
+    &:hover {
+        &::before {
+            background-color: #B4A3FF;
+        }
+    }
+    &:active {
+        &::before {
+            background-color: #BBB;
+        }
+    }
     &::before {
         content: '';
         position: absolute;
@@ -58,10 +68,25 @@ $accent: #8266FF;
         top: calc(50% - 20px);
         width: 40px;
         height: 40px;
-        background-image: url(assets/imgs/button-decor.png);
+        background-color: #fff;
+        border-radius: 50%;
         z-index: 2;
         background-size: cover;
+        transition: .35s ease;
         background-repeat: no-repeat;
+    }
+    &::after {
+        content: '';
+        background-image: url(assets/imgs/button-arrow.svg);
+        width: 6px;
+        height: 11px;
+        position: absolute;
+        right: 21px;
+        top: 19px;
+        z-index: 10;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
@@ -101,3 +126,60 @@ body {
 
     }
 }
+
+
+label.input-main {
+    position: relative;
+}
+label.input-main input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: 1.5px solid #373737;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #373737;
+    -webkit-transition: .35s ease;
+    -o-transition: .35s ease;
+    transition: .35s ease;
+  }
+  
+label.input-main input:focus {
+    outline: 1px solid #8266FF;
+  }
+  
+label.input-main input:focus + span {
+    color: #8266FF;
+  }
+  
+label.input-main span {
+    position: absolute;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    left: 20px;
+    top: 15px;
+    -webkit-transition: .35s ease;
+    -o-transition: .35s ease;
+    transition: .35s ease;
+    width: max-content;
+  }
+  
+label.input-main span._top {
+    top: -12px;
+  }
+  
+label.input-main:hover input {
+    border-color: #AD7AFF;
+  }
+  
+label.input-main:hover span {
+    color: #AD7AFF;
+  }

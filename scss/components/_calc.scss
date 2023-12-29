@@ -44,7 +44,7 @@
             bottom: 25px;
             box-sizing: border-box;
             border: none;
-            background-image: url(assets/imgs/tooltip.png);
+            background-image: url(assets/imgs/tooltip.webp);
             background-size: 100% 100%;
             padding: 6px 15px 10px;
             background-repeat: no-repeat;
@@ -351,7 +351,7 @@
                         position: absolute;
                         right: -2px;
                         top: -4px;
-                        background-image: url(assets/imgs/check-icon.png);
+                        background-image: url(assets/imgs/check-icon.webp);
                         background-size: 100% 100%;
                         transition: .35s ease;
                         opacity: 0;
@@ -413,6 +413,7 @@
 
 @media(max-width:920px) {
     .calc {
+        padding: 35px 0;
         &__tabs {
             display: none;
         }

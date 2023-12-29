@@ -1,0 +1,65 @@
+.footer {
+    background: linear-gradient(180deg, #423A83 0%, #CDA8F3 100%);
+    padding: 60px 0px;
+    // .footer__flex
+
+    &__flex {
+            display: flex;
+            justify-content: space-between;
+            
+    }
+
+    // .footer__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+       
+        a{
+        color: #FFF;
+        font-family: $font;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        text-decoration: none;
+        @media (max-width:375px){
+              font-size: 10px;
+        }
+        
+        &:nth-child(2) {
+            margin-left: 40px;
+        }
+        }
+        &:nth-child(1) {
+            @media (max-width:768px){
+                  display: none;
+            }
+        }
+        
+    }
+
+    // .footer__link
+
+    &__link {
+        position: relative;
+        padding-left: 40px;
+        @media (max-width:375px){
+            padding-left: 32px;  
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url('assets/imgs/sms-tracking.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+

@@ -1,0 +1,124 @@
+.studio {
+    padding: 75px 0;
+    box-sizing: border-box;
+    // .studio__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    // .studio__text
+
+    &__text {
+        width: 60%;
+        margin-right: auto;
+        max-width: 670px;
+        p {
+            font-size: 26px;
+            margin: 0;
+            font-weight: 500;
+            line-height: 1.1;
+            display: block;
+        }
+    }
+
+    // .studio__video
+
+    &__video {
+        position: relative;
+        width: 40%;
+        margin-left: 30px;
+        a {
+            display: block;
+            position: relative;
+            width: fit-content;
+            text-decoration: underline;
+            >img {
+                display: block;
+                width: 100%;
+            }
+            .text {
+                color: #fff;
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+            }
+        }
+        .play-btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        
+        >img {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}
+.container {
+}
+.section {
+
+    // .section__title
+
+    &__title {
+    }
+}
+.section-title {
+}
+.play-btn {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media(max-width:1024px) {
+    .studio {
+        &__text {
+            width: 50%;
+            p {
+                font-size: 20px;
+            }
+        }
+        &__video {
+            width: 50%;
+        }
+    }
+}
+
+@media(max-width:920px) {
+    .studio {
+        padding: 35px 0;
+        &__body {
+            flex-direction: column;
+        }
+        &__text {
+            margin: 0;
+            max-width: none;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__video {
+            max-width: 440px;
+            width: 100%;
+            margin:  auto;
+            a {
+                .play-btn {
+                    width: 60px;
+                    height: 60px;
+                }
+                .text {
+                    left: 20px;
+                    bottom: 15px;
+                }
+            }
+        }
+    }
+}
